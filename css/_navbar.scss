@@ -1,0 +1,21 @@
+.main-navbar {
+    * {
+        color: #fff !important;
+    }
+    .navbar-brand {
+        span {
+            color: #fff;
+            b {
+                color: #34E0AA !important;
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .fa-search {
+        cursor: pointer;
+    }
+    .btn{
+        @extend .rounded-btn;
+        padding: .5rem 2rem;
+    }
+}

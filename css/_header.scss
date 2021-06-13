@@ -1,0 +1,18 @@
+.top-contact-header {
+    background-color: #29d39e;
+    color: #fff;
+    div {
+        i{
+            font-size: 20px;
+        }
+        & > i.fa {
+            margin: auto 12px;
+            &.fa-facebook-square {
+                margin-left: 140px;
+            }
+        }
+        span{
+            margin: auto 12px;
+        }
+    }
+}

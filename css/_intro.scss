@@ -1,12 +1,7 @@
 // intro img section
-.intro-img {
-    height: 900px;
+.intro-wrapper {
     background-image: url("../images/intro-bg.png");
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+    height: 100%;
 }
 // end of intro img section
 
@@ -16,30 +11,16 @@
         color: #fff;
     }
     h1 {
+        margin-top: 6rem !important;
         span {
             color: #34e0aa;
         }
     }
     .play-icon {
-        background: rgba(255, 255, 255, 0.05);
-        width: 100px;
-        height: 100px;
+        background: #34e0aa;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
-        div {
-            background: rgba(255, 255, 255, 0.1);
-            width: 85px;
-            height: 85px;
-            border-radius: 50%;
-            span {
-                align-items: center;
-                i {
-                    padding: 20px;
-                    background: linear-gradient(#31DDA7, #29BCD6);;
-                    box-shadow: 0 5px 10px 0px #fff;
-                    border-radius: 50%;
-                }
-            }
-        }
     }
     .about-btn {
         @extend .rounded-btn;
@@ -53,25 +34,21 @@
         }
     }
     .whatsapp-btn {
-        margin-top: -20px;
-        margin-right: 20px;
-        background: rgba(255, 255, 255, 0.05);
-        width: 100px;
-        height: 100px;
+        position: absolute;
+        right: 1rem;
+        bottom: 0;
+        background: #17cb48;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
-        div {
-            background: rgba(255, 255, 255, 0.1);
-            width: 85px;
-            height: 85px;
-            border-radius: 50%;
-            span {
-                align-items: center;
-                i {
-                    padding: 10px;
-                    background: #17cb48;
-                    box-shadow: 0 5px 10px 0px #3ff770;
-                    border-radius: 50%;
-                }
+        @media (max-width: 575px) {
+            width: 70px;
+            height: 70px;
+        }
+
+        i {
+            @media (max-width: 575px) {
+                font-size: 1.2rem;
             }
         }
     }

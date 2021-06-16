@@ -1,17 +1,34 @@
 .top-contact-header {
+    position: relative;
     background-color: #29d39e;
     color: #fff;
+    @media (max-width: 991px) {
+        display: flex;
+        justify-content: center;
+    }
+    @media (max-width: 767px) {
+        font-size: 0.75rem;
+    }
     div {
-        i{
+        i {
             font-size: 20px;
+            @media (max-width: 767px) {
+                font-size: 0.75rem;
+            }
         }
         & > i.fa {
             margin: auto 12px;
+            @media (max-width: 767px) {
+                margin: auto 6px;
+            }
             &.fa-facebook-square {
                 margin-left: 140px;
+                @media (max-width: 767px) {
+                    margin-left: 2rem;
+                }
             }
         }
-        span{
+        span {
             margin: auto 12px;
         }
     }

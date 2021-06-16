@@ -1,0 +1,49 @@
+.live {
+    h1 {
+        color: #111256;
+    }
+    p {
+        color: #7e808b;
+    }
+    hr {
+        border: none;
+        width: 65px;
+        height: 5px;
+        background: linear-gradient(#31dda7, #29bcd6);
+        box-shadow: 0 3px 6px #5abacd;
+        margin: 0 auto 3rem;
+    }
+    .video-wrapper {
+        height: 610px;
+        width: 100%;
+        background: #020a2b;
+        cursor: pointer;
+        @media (max-width: 575px){
+            height: 300px;
+        }
+        .play-icon {
+            background: rgba(255, 255, 255, 0.05);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            div {
+                background: rgba(255, 255, 255, 0.1);
+                width: 85px;
+                height: 85px;
+                border-radius: 50%;
+                span {
+                    align-items: center;
+                    i {
+                        padding: 20px;
+                        background: linear-gradient(#31dda7, #29bcd6);
+                        box-shadow: 0 5px 10px 0px #fff;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    button{
+        @extend .rounded-btn;
+    }
+}

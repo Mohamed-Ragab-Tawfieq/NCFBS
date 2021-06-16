@@ -1,0 +1,105 @@
+.agenda {
+    position: relative;
+    color: #111256;
+    &::after {
+        content: url("../images/Image\ 7.png");
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @media (max-width: 575px) {
+            content: "";
+        }
+    }
+    .nav-pills {
+        .btn-link {
+            @extend .rounded-btn;
+            background: #111256;
+            // height: 40px;
+            margin: 2rem 0.5rem;
+            @media (max-width: 575px) {
+                margin: 1rem 0.2rem;
+                padding: 0.3rem;
+                p {
+                    font-size: 1rem;
+                    background: red;
+                }
+            }
+        }
+        .btn-link.active {
+            background: linear-gradient(#31dda7, #29bcd6);
+            @media (max-width: 575px) {
+                margin: 1rem 0.1rem;
+                padding: 0.3rem;
+            }
+        }
+        .nav-item {
+            @media (max-width: 575px) {
+                p {
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+    hr {
+        border: none;
+        width: 65px;
+        height: 5px;
+        background: linear-gradient(#31dda7, #29bcd6);
+        box-shadow: 0 3px 6px #5abacd;
+    }
+    button {
+        @extend .rounded-btn;
+        background: #111256;
+        height: 40px;
+        margin: 2rem 0.5rem;
+    }
+    .first-day-btn {
+        background: linear-gradient(#31dda7, #29bcd6);
+    }
+    .card {
+        border-radius: 0.75rem;
+        color: #111256;
+        box-shadow: 0 3px 7px rgba(143, 137, 137, 0.16);
+        p:first-of-type {
+            font-weight: bold;
+        }
+        img {
+            width: 63px;
+            height: 63px;
+            border-radius: 50%;
+        }
+    }
+    .col-lg-3:last-of-type {
+        .card {
+            border-right: 7px solid #111256;
+        }
+    }
+    .card:nth-of-type(odd) {
+        border-right: 7px solid #31dda7;
+    }
+    .time {
+        font-size: 16px;
+        @media (max-width: 575px) {
+            font-size: 12px;
+        }
+        
+    }
+    .separator {
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(#31dda7, #29bcd6);
+        color: #fff;
+        .fa-check {
+            padding: 0.5rem;
+            border-radius: 50%;
+            margin: 3rem auto;
+        }
+        .fa:nth-of-type(odd) {
+            background: linear-gradient(#31dda7, #29bcd6);
+        }
+        .fa:nth-of-type(even) {
+            background: #111256;
+        }
+    }
+}

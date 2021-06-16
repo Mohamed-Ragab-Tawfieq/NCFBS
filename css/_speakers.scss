@@ -1,5 +1,11 @@
 .speakers {
     background: #f6f7fc;
+    h1 {
+        color: #111256;
+    }
+    p:first-of-type {
+        color: #7e808b;
+    }
     hr {
         border: none;
         width: 65px;
@@ -7,61 +13,80 @@
         background: linear-gradient(#31dda7, #29bcd6);
         box-shadow: 0 3px 6px #5abacd;
     }
-    .speaker-box {
-        position: relative;
-        margin: 10px auto;
-        .overlay-top {
-            height: calc(100% - 85px);
-            background: rgba(49, 221, 167, 0.6);
-            color: #fff;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            opacity: 0;
-            a {
+    .speakers-slider {
+        .speaker-box {
+            position: relative;
+            margin: 10px auto;
+            &:focus-visible {
+                outline: none !important;
+            }
+
+            img {
+                width: 100%;
+            }
+            .overlay-top {
+                height: calc(100% - 85px);
+                background: rgba(49, 221, 167, 0.6);
                 color: #fff;
-                i {
-                    margin: 0 1rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                a {
+                    color: #fff;
+                    i {
+                        margin: 0 1rem;
+                    }
+                }
+            }
+            .overlay-top.show {
+                opacity: 1;
+                transition: all 0.3s ease-in-out;
+            }
+            .overlay {
+                height: 85px;
+                background: rgba(2, 10, 43, 0.75);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                p {
+                    color: #fff;
+                    margin: 5px auto;
                 }
             }
         }
-        .overlay-top.show {
-            opacity: 1;
-            transition: all 0.3s ease-in-out;
+        .slick-slide{
+            margin: 10px;
         }
-        .overlay {
-            height: 85px;
-            background: rgba(2, 10, 43, 0.75);
-            color: #fff;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            p {
-                margin: 5px auto;
+        .slick-dots {
+            li {
+                width: 12px;
+                height: 12px;
+                margin: auto 1rem;
+                @media (max-width: 575px){
+                    width: 2px;
+                    height: 2px;
+                    margin: auto 1rem
+                }
+                button {
+                    background-color: #7E808B;
+                    border-radius: 50%;
+                    text-indent: -9999px;
+                }
+            }
+            li.slick-active{
+                button{
+                    background: linear-gradient(#31dda7, #29bcd6);
+                    border: 1px solid #fff;
+                    box-shadow: 1.5px 2.5px 7px #5ABACD;
+                }
             }
         }
-    }
-    ol.carousel-indicators {
-        position: relative;
-        padding: 0;
-        li {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #31dda7;
-            border: 1px solid #fff;
-        }
-        li.active {
-            box-shadow: 1.5px 2.5px 7px #5abacd;
-        }
-    }
-    button {
-        @extend .rounded-btn;
     }
 }

@@ -1,21 +1,80 @@
-.main-navbar {
-    * {
-        color: #fff !important;
+.toggler-header {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    button {
+        outline: 0;
     }
     .navbar-brand {
+        @media (max-width: 575px) {
+            font-size: 0.5rem;
+            span {
+                font-size: 0.9rem;
+            }
+        }
         span {
             color: #fff;
             b {
-                color: #34E0AA !important;
+                color: #34e0aa !important;
                 font-size: 1.4rem;
+                @media (max-width: 575px) {
+                    font-size: 1rem;
+                }
             }
         }
     }
+}
+.main-navbar {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 0;
+    z-index: 1024;
+    .nav-item {
+        position: static;
+        .dropdown-menu {
+            left: 0;
+            right: 0;
+            margin: 0;
+            border-radius: 0;
+        }
+        hr {
+            z-index: 55;
+        }
+        @media (max-width: 991px) {
+            padding: 0;
+        }
+    }
+    .nav-item.active {
+        border-bottom: 5px solid #31dda7;
+    }
+
     .fa-search {
         cursor: pointer;
     }
-    .btn{
+    .btn {
         @extend .rounded-btn;
-        padding: .5rem 2rem;
+        padding: 0.5rem 2rem;
+    }
+
+    @media (max-width: 991px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: -75%;
+        height: 100%;
+        width: 50%;
+        overflow: hidden;
+        background: linear-gradient(#31dda7, #29bcd6);
+        z-index: 55;
+        transition: all 0.3s ease-in-out;
+        &.slide-in {
+            right: 0;
+            transform: translateX(0);
+        }
+
+        &.slide-out {
+            transform: translateX(100%);
+        }
     }
 }

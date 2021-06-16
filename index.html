@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.5.3/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style-rtl.min.css">
 </head>
@@ -31,7 +37,10 @@
             </span>
         </div>
     </header>
-    <nav class="main-navbar navbar navbar-expand-lg navbar-light">
+    <header class="toggler-header d-lg-none d-flex">
+        <button class="navbar-toggler mx-2">
+            <i class="fa fa-bars fa-2x text-white" aria-hidden="true"></i>
+        </button>
         <a class="navbar-brand d-flex align-items-center" href="#">
             <span class="d-block my-auto mx-lg-2">
                 <b>الملتقى الوطني لاتسدامة<br> المنشئـــــــات العائليــــــــة</b>
@@ -41,685 +50,881 @@
             </span>
             <img src="images/Union 1.png" alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav align-items-center">
-                <li class="nav-item mx-lg-2">
-                    <a class="nav-link" href="#">
-                        <img src="images/2030.png" alt="">
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">الرئيسية <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        عن المنتدى
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">الدورات</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        المركز الإعلامي
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        الشركات العائلية
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        تواصل معنا
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-auto mx-2">
-                <i class="fa fa-search fa-lg" aria-hidden="true"></i>
-                <input class="form-control d-none mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <a class="btn mx-3 " href="#" role="button">سجل الآن</a>
-            </form>
-        </div>
-    </nav>
-    <!-- main wrapper -->
-    <div class="container-fluid">
-        <!-- intro img -->
-        <div class="intro-img">
-            <div class="row">
-                <div class="col-12 p-0">
+    </header>
+    <nav class="main-navbar navbar navbar-expand-lg navbar-dark p-0">
+        <div class="navbar-wrapper position-relative w-100">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center flex-grow-1">
+                    <ul class="navbar-nav text-lg-center">
+                        <li class="nav-item d-flex align-items-center mx-lg-2 p-2">
+                            <i class="fa fa-times fa-lg mr-5 d-lg-none" aria-hidden="true"></i>
+                            <a class="nav-link ml-5" href="#">
+                                <img src="images/2030.png" alt="">
+                            </a>
+                            <hr class="bg-danger">
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">الرئيسية <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown" id="myDropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                عن المنتدى
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">الدورات</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                المركز الإعلامي
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                الشركات العائلية
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                تواصل معنا
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-lg-inline">
+                        <div class="d-flex flex-column flex-lg-row ">
+                            <i class="fa fa-search fa-lg my-3 my-lg-auto" aria-hidden="true"></i>
+                            <input class="form-control d-none mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <a class="btn mx-3 " href="#" role="button">سجل الآن</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <!-- end of intro img -->
+    </nav>
+    <!-- intro img -->
+    <div class="intro-wrapper">
+        <div class="intro-img">
+        </div>
         <!-- intro section -->
-        <div class="intro-text text-center">
-            <div class="row">
+        <div class="intro-text py-5">
+            <div class="row m-0">
                 <div class="col-12 p-0">
-                    <h1 class="text-center py-3 mt-5 mb-3">
-                        أكبر حدث للشركات العائلية
-                        <span class="d-block">منتدى المركز الوطني للتأهيل والقيادة</span>
-                    </h1>
-                    <p class="py-3">شاهد البث المباشر</p>
-                    <div class="play-icon d-flex align-items-center justify-content-center mx-auto py-3">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <span>
-                                <i class="fa fa-play fa-lg" aria-hidden="true"></i>
-                            </span>
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                        <h1 class="text-center pt-5 mt-5">
+                            أكبر حدث للشركات العائلية
+                            <span class="d-block">منتدى المركز الوطني للتأهيل والقيادة</span>
+                        </h1>
+                        <p class="py-3">شاهد البث المباشر</p>
+                        <div class="play-icon glow-green d-flex align-items-center justify-content-center">
+                            <i class="fa fa-play fa-lg" aria-hidden="true"></i>
                         </div>
-                    </div>
-                    <button class="btn about-btn my-5">عن المنتدى</button>
-                    <div class="whatsapp-btn d-flex align-items-center justify-content-center py-3">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <span>
-                                <i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i>
-                            </span>
+                        <button class="btn about-btn my-5">عن المنتدى</button>
+                        <div class="whatsapp-btn glow-green d-flex align-items-center justify-content-center">
+                            <i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end of intro section -->
-        <!-- about section -->
-        <div class="about-section text-center py-5">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="my-3">عن المنتدى</h1>
-                    <p class="py-1">نبذة عن المنتدى</p>
-                    <hr>
-                    <p class="py-3 px-5">عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن
-                        المنتدى عن
-                        المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى
-                        عن المنتدى عن المنتدى عن المنتدى
-                    </p>
-                    <button class="my-5 btn">المزيد</button>
-                </div>
-            </div>
-        </div>
-        <!-- end of about section -->
     </div>
-    <!-- speakers section -->
-    <div class="speakers text-center py-5">
-        <div class="container">
-            <div class="col-12">
-                <h1>المتحدثين والخطباء</h1>
-                <p>اهم المتحدثين والخطباء</p>
-                <hr class="mb-5">
-            </div>
-            <!--Carousel Wrapper-->
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-                    <!--First slide-->
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/1.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/3.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/2.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/4.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/1.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/4.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/.First slide-->
-
-                    <!--Second slide-->
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/1.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/3.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/2.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/4.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/1.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/4.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/.Second slide-->
-
-                    <!--Third slide-->
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/1.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/3.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/2.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/4.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/1.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="speaker-box">
-                                    <a href="#">
-                                        <img src="images/4.png" class="img-fluid w-100" alt="">
-                                    </a>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay-top d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                        <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div class="overlay">
-                                        <p>محمد محمد</p>
-                                        <p>مستشار مستشار</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/.Third slide-->
-
-                </div>
-                <!--/.Slides-->
-                <!--Indicators-->
-                <ol class="carousel-indicators mt-2">
-                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                    <li data-target="#multi-item-example" data-slide-to="1"></li>
-                    <li data-target="#multi-item-example" data-slide-to="2"></li>
-                </ol>
-                <!--/.Indicators-->
-                <button class="btn mt-4">المزيد</button>
-            </div>
-            <!--/.Carousel Wrapper-->
-
-        </div>
-    </div>
-    <!-- end of speakers section -->
-    <!-- speakers section -->
-    <!-- <div class="speakers glide text-center py-5">
+    <!-- end of intro img -->
+    <!-- about section -->
+    <div class="about-section text-center py-5">
         <div class="row m-0">
             <div class="col-12">
+                <h1 class="my-3">عن المنتدى</h1>
+                <p class="py-1">نبذة عن المنتدى</p>
+                <hr>
+                <p class="py-3 px-5">عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن
+                    المنتدى عن
+                    المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى
+                    عن المنتدى عن المنتدى عن المنتدى
+                </p>
+                <button class="my-5 btn">المزيد</button>
+            </div>
+        </div>
+    </div>
+    <!-- end of about section -->
+    <!-- speakers section -->
+    <div class="speakers text-center py-5">
+        <div class="container-fluid">
+            <div class="col-12">
                 <h1>المتحدثين والخطباء</h1>
                 <p>اهم المتحدثين والخطباء</p>
                 <hr class="mb-5">
+                <div class="speakers-slider">
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/1.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/2.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/3.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/4.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/4.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/1.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/1.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/2.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/3.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/4.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/4.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/1.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/1.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/2.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/3.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/4.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/4.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                    <div class="speaker-box item">
+                        <a href="#">
+                            <img src="images/1.png" alt="">
+                        </a>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay-top d-flex align-items-center justify-content-center">
+                            <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="overlay">
+                            <p>محمد محمد</p>
+                            <p>مستشار مستشار</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="speaker-box">
-                            <a href="#">
-                                <img src="images/1.png" class="img-fluid w-100" alt="">
-                            </a>
-                            <div class="overlay-top d-flex align-items-center justify-content-center">
-                                <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <!-- end of speakers section -->
+    <!-- agenda section -->
+    <div class="agenda">
+        <div class="row m-0 text-center py-5">
+            <div class="col-12">
+                <h1>اجندة المحتوى</h1>
+                <p>جدول مواعيد المحاضرات</p>
+                <hr>
+                <div class="d-flex justify-content-center mx-auto">
+                </div>
+                <ul class="nav nav-pills d-flex justify-content-center mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="btn btn-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                            aria-controls="pills-home" aria-selected="true">اليوم الاول</a>
+                        <p>23 رمضان 1439</p>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                            aria-controls="pills-profile" aria-selected="false">اليوم الثاني</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                            aria-controls="pills-contact" aria-selected="false">اليوم الثالث</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div class="row m-0 text-center">
+                            <div class="offset-lg-2 col-lg-3">
+                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                    <img src="images/3.png" alt="">
+                                    <div class="px-3">
+                                        <p>التسجيل</p>
+                                        <p>نبذة عن المحاضرة</p>
+                                    </div>
+                                </div>
+                                <div class="time py-5 text-right">
+                                    09:00 AM الى 09:00 AM
+                                </div>
+                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                    <img src="images/3.png" alt="">
+                                    <div class="px-3">
+                                        <p>التسجيل</p>
+                                        <p>نبذة عن المحاضرة</p>
+                                    </div>
+                                </div>
+                                <div class="time py-5 text-right">
+                                    09:00 AM الى 09:00 AM
+                                </div>
                             </div>
-                            <div class="overlay-top d-flex align-items-center justify-content-center">
-                                <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                            <div class="d-none d-lg-block col-lg-1">
+                                <div class="separator mx-auto d-flex justify-content-center">
+                                    <div>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="overlay">
-                                <p>محمد محمد</p>
-                                <p>مستشار مستشار</p>
+                            <div class="col-lg-3">
+                                <div class="time py-5 text-left">
+                                    09:00 AM الى 09:00 AM
+                                </div>
+                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                    <img src="images/3.png" alt="">
+                                    <div class="px-3">
+                                        <p>التسجيل</p>
+                                        <p>نبذة عن المحاضرة</p>
+                                    </div>
+                                </div>
+                                <div class="time py-5 text-left">
+                                    09:00 AM الى 09:00 AM
+                                </div>
+                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                    <img src="images/3.png" alt="">
+                                    <div class="px-3">
+                                        <p>التسجيل</p>
+                                        <p>نبذة عن المحاضرة</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="speaker-box">
-                            <a href="#">
-                                <img src="images/1.png" class="img-fluid w-100" alt="">
-                            </a>
-                            <div class="overlay-top d-flex align-items-center justify-content-center">
-                                <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div class="row m-0 text-center">
+                            <div class="offset-lg-2 col-lg-3">
+                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                    <img src="images/3.png" alt="">
+                                    <div class="px-3">
+                                        <p>التسجيل</p>
+                                        <p>نبذة عن المحاضرة</p>
+                                    </div>
+                                </div>
+                                <div class="time py-5 text-right">
+                                    10:00 AM الى 10:00 AM
+                                </div>
+                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                    <img src="images/3.png" alt="">
+                                    <div class="px-3">
+                                        <p>التسجيل</p>
+                                        <p>نبذة عن المحاضرة</p>
+                                    </div>
+                                </div>
+                                <div class="time py-5 text-right">
+                                    10:00 AM الى 10:00 AM
+                                </div>
                             </div>
-                            <div class="overlay-top d-flex align-items-center justify-content-center">
-                                <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                            <div class="d-none d-lg-block col-lg-1">
+                                <div class="separator mx-auto d-flex justify-content-center">
+                                    <div>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="overlay">
-                                <p>محمد محمد</p>
-                                <p>مستشار مستشار</p>
+                            <div class="col-lg-3">
+                                <div class="time py-5 text-left">
+                                    09:00 AM الى 09:00 AM
+                                </div>
+                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                    <img src="images/4.png" alt="">
+                                    <div class="px-3">
+                                        <p>التسجيل</p>
+                                        <p>نبذة عن المحاضرة</p>
+                                    </div>
+                                </div>
+                                <div class="time py-5 text-left">
+                                    09:00 AM الى 09:00 AM
+                                </div>
+                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                    <img src="images/4.png" alt="">
+                                    <div class="px-3">
+                                        <p>التسجيل</p>
+                                        <p>نبذة عن المحاضرة</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="speaker-box">
-                            <a href="#">
-                                <img src="images/1.png" class="img-fluid w-100" alt="">
-                            </a>
-                            <div class="overlay-top d-flex align-items-center justify-content-center">
-                                <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <div class="row m-0 text-center">
+                            <div class="offset-lg-2 col-lg-3">
+                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                    <img src="images/1.png" alt="">
+                                    <div class="px-3">
+                                        <p>التسجيل</p>
+                                        <p>نبذة عن المحاضرة</p>
+                                    </div>
+                                </div>
+                                <div class="time py-5 text-right">
+                                    09:00 AM الى 09:00 AM
+                                </div>
+                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                    <img src="images/1.png" alt="">
+                                    <div class="px-3">
+                                        <p>التسجيل</p>
+                                        <p>نبذة عن المحاضرة</p>
+                                    </div>
+                                </div>
+                                <div class="time py-5 text-right">
+                                    09:00 AM الى 09:00 AM
+                                </div>
                             </div>
-                            <div class="overlay-top d-flex align-items-center justify-content-center">
-                                <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                            <div class="d-none d-lg-block col-lg-1">
+                                <div class="separator mx-auto d-flex justify-content-center">
+                                    <div>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="overlay">
-                                <p>محمد محمد</p>
-                                <p>مستشار مستشار</p>
+                            <div class="col-lg-3">
+                                <div class="time py-5 text-left">
+                                    09:00 AM الى 09:00 AM
+                                </div>
+                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                    <img src="images/3.png" alt="">
+                                    <div class="px-3">
+                                        <p>التسجيل</p>
+                                        <p>نبذة عن المحاضرة</p>
+                                    </div>
+                                </div>
+                                <div class="time py-5 text-left">
+                                    09:00 AM الى 09:00 AM
+                                </div>
+                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                    <img src="images/3.png" alt="">
+                                    <div class="px-3">
+                                        <p>التسجيل</p>
+                                        <p>نبذة عن المحاضرة</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
         </div>
-    </div> -->
-    <!-- end of speakers section -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    </div>
+    <!-- end of agenda section -->
+    <!-- news -->
+    <div class="news text-center">
+        <div class="row m-0">
+            <div class="col-12 offset-lg-2 col-lg-8 offset-lg-2">
+                <div class="mx-auto py-4">
+                    <h1>لمعرفة آخر الاخبار</h1>
+                    <p class="text-center">اشترك الآن</p>
+                    <hr>
+                    <div class="d-flex flex-column flex-lg-row">
+                        <input type="text" class="form-control" placeholder="اشترك لمعرفة آخر الاخبار">
+                        <button type="button" class="btn btn-primary px-lg-4 mx-lg-3">اشترك</button>
+                    </div>
+                </div>
+            </div>
+            <img src="images/Intersection 4.png" class="img-fluid" alt="">
+            <div class="overlay"></div>
+        </div>
+    </div>
+    <!-- end of news -->
+    <!-- live -->
+    <div class="live text-center py-5">
+        <div class="container">
+            <div class="col-12">
+                <h1>البث المباشر</h1>
+                <p>شاهد البث المباشر للمؤتمر الان</p>
+                <hr>
+                <div class="video-wrapper d-flex align-items-center justify-content-center">
+                    <div class="play-icon d-flex align-items-center justify-content-center py-3">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <span>
+                                <i class="fa fa-play fa-lg" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn my-5 px-3">شاهد التسجيلات السابقة</button>
+            </div>
+        </div>
+    </div>
+    <!-- end of live -->
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row m-0">
+                <div class="col-lg-4">
+                    <ul>
+                        <li class="border-0">
+                            <a class="navbar-brand d-flex align-items-center" href="#">
+                                <span class="d-block my-auto mx-lg-2">
+                                    <b>الملتقى الوطني لاتسدامة<br> المنشئـــــــات العائليــــــــة</b>
+                                    <br>
+                                    National Conference for Family <br>
+                                    Business Sustainability (NCFBS)
+                                </span>
+                                <img src="images/Union 1.png" class="img-fluid" alt="">
+                            </a>
+                        </li>
+                        <li class="my-3 w-50 w-lg-100">
+                            عن المنتدىعن المنتدىعن المنتدىعن المنتدىعن المنتدىعن المنتدىعن المنتدىعن
+                            المنتدىعن
+                            المنتدىعن
+                            المنتدى
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul>
+                        <li>
+                            روابط هامة
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                المركز الاعلامي</a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                الشركات العائلية </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                البث المباشر</a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                اجندة المنتدى</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <ul>
+                        <li>الرئيسية</li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                البث المباشر</a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                الشروط و الاحكام</a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                سياسة الخصوصية</a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                تواصل معنا </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <ul class="row px-3">
+                        <li class="col-12">بيانات الاتصال</li>
+                        <li class="col-4 p-0 m-0">
+                            <p class="d-flex align-items-center"><i class="fa fa-map-marker mx-2" aria-hidden="true"></i>
+                                العنوان
+                            </p>
+                        </li>
+                        <li class="col-8 p-0 m-0">
+                            <p>طريق صلاح الدين الأيوبي، الضباط، الرياض 12623، السعودية</p>
+                        </li>
+                        <li class="col-4 p-0 m-0">
+                            <p class="d-flex align-items-center"><i class="fa fa-phone mx-2" aria-hidden="true"></i>
+                                الرقم الموحد
+                            </p>
+                        </li>
+                        <li class="col-8 p-0 m-0">
+                            <p>920033515</p>
+                        </li>
+                        <li class="col-4 p-0 m-0">
+                            <p class="d-flex align-items-center"><i class="fa fa-print mx-2" aria-hidden="true"></i>
+                                فاكس
+                            </p>
+                        </li>
+                        <li class="col-8 p-0 m-0">
+                            <p>0114975665</p>
+                        </li>
+                        <li class="col-4 p-0 m-0">
+                            <p class="d-flex align-items-center"><i class="fa fa-print mx-2" aria-hidden="true"></i>
+                                الرمز البريدي
+
+                            </p>
+                        </li>
+                        <li class="col-8 p-0 m-0">
+                            <p>920033515</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="overlay"></div>
+                <div class="row m-0">
+                    <div class="copyright d-flex align-items-center justify-content-center">
+
+                        <div class="col-lg-4">
+                            <span>كل الحقوق محفوظة للمركز الوطني للتاهيل والقيادة 2020</span>
+                        </div>
+                        <div class="col-lg-4">
+                            <span>تم التطوير بواسطة اسجى التقنية 2020</span>
+                        </div>
+                        <div class="col-lg-4">
+                            <span class="social">
+                                <i class="fa fa-globe fa-2x m-lg-1" aria-hidden="true"></i>
+                                <b>English</b>
+                                <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                                <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                                <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <img src="images/Intersection 4.png" alt="">
+            </div>
+        </div>
+        <span class="go-top"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span>
+    </footer>
+    <!-- end of footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/scripts.js"></script>
 </body>
 

@@ -17,9 +17,6 @@
         .speaker-box {
             position: relative;
             margin: 10px auto;
-            &:focus-visible {
-                outline: none !important;
-            }
 
             img {
                 width: 100%;

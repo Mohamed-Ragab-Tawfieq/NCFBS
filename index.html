@@ -18,7 +18,8 @@
 </head>
 
 <body>
-    <header class="top-contact-header py-1" dir="ltr">
+    <!-- contact header -->
+    <header class="py-1 top-contact-header" dir="ltr">
         <div class="d-flex align-items-center">
             <i class="fa fa-facebook-square" aria-hidden="true"></i>
             <i class="fa fa-twitter-square" aria-hidden="true"></i>
@@ -37,29 +38,36 @@
             </span>
         </div>
     </header>
-    <header class="toggler-header d-lg-none d-flex">
-        <button class="navbar-toggler mx-2">
-            <i class="fa fa-bars fa-2x text-white" aria-hidden="true"></i>
+    <!-- contact header -->
+    <!-- nav toggler button -->
+    <header class="toggler-header d-flex">
+        <button class="mx-2 navbar-toggler d-lg-none">
+            <i class="text-white fa fa-bars fa-2x" aria-hidden="true"></i>
         </button>
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <span class="d-block my-auto mx-lg-2">
-                <b>الملتقى الوطني لاتسدامة<br> المنشئـــــــات العائليــــــــة</b>
-                <br>
-                National Conference for Family <br>
-                Business Sustainability (NCFBS)
-            </span>
-            <img src="images/Union 1.png" alt="">
-        </a>
+
     </header>
-    <nav class="main-navbar navbar navbar-expand-lg navbar-dark p-0">
+
+    <!-- main navbar -->
+    <nav class="main-navbar navbar p-0 navbar-expand-lg">
         <div class="navbar-wrapper position-relative w-100">
             <div class="container">
-                <div class="d-flex justify-content-between align-items-center flex-grow-1">
-                    <ul class="navbar-nav text-lg-center">
-                        <li class="nav-item d-flex align-items-center mx-lg-2 p-2">
-                            <i class="fa fa-times fa-lg mr-5 d-lg-none" aria-hidden="true"></i>
-                            <a class="nav-link ml-5" href="#">
-                                <img src="images/2030.png" alt="">
+                <div class="d-flex justify-content-center align-items-center flex-grow-1">
+                    <ul class="navbar-nav d-lg-flex align-items-right align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="navbar-brand d-flex align-items-center" href="#">
+                                <small>
+                                    <b>الملتقى الوطني لاتسدامة<br> المنشئـــــــات العائليــــــــة</b>
+                                    <br>
+                                    National Conference for Family <br>
+                                    Business Sustainability (NCFBS)
+                                </small>
+                                <img src="images/Union 1.png" class="mx-2" alt="">
+                            </a>
+                        </li>
+                        <li class="p-2 nav-item d-flex align-items-center mx-lg-2">
+                            <i class="mr-5 fa fa-times fa-lg d-lg-none text-white" aria-hidden="true"></i>
+                            <a class="ml-5 nav-link" href="#">
+                                <img src="images/2030.png" class="sm-logo" alt="">
                             </a>
                             <hr class="bg-danger">
                         </li>
@@ -71,11 +79,27 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 عن المنتدى
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="py-5 text-center dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <div class="row m-0">
+                                    <div class="col-lg-4">
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/Rectangle 131.png" alt="">
+                                            بيانات التواصل
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/Rectangle 131.png" alt="">
+                                            الاسئلة المتكررة
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/Rectangle 131.png" alt="">
+                                            الاقتراحات والشكاوى
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -86,11 +110,27 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 المركز الإعلامي
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="py-5 text-center dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <div class="row m-0">
+                                    <div class="col-lg-4">
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/Rectangle 207.png" alt="">
+                                            بيانات التواصل
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/Rectangle 207.png" alt="">
+                                            الاسئلة المتكررة
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/Rectangle 207.png" alt="">
+                                            الاقتراحات والشكاوى
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -98,11 +138,27 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 الشركات العائلية
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="py-5 text-center dropdown-menu" aria-labelledby="navbarDropdown3">
+                                <div class="row m-0">
+                                    <div class="col-lg-4">
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/Rectangle 1333.png" alt="">
+                                            بيانات التواصل
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/Rectangle 1333.png" alt="">
+                                            الاسئلة المتكررة
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/Rectangle 1333.png" alt="">
+                                            الاقتراحات والشكاوى
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -110,35 +166,52 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 تواصل معنا
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="py-5 text-center dropdown-menu" aria-labelledby="navbarDropdown4">
+                                <div class="row m-0">
+                                    <div class="col-lg-4">
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/Rectangle 131.png" alt="">
+                                            بيانات التواصل
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/Rectangle 131.png" alt="">
+                                            الاسئلة المتكررة
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/Rectangle 131.png" alt="">
+                                            الاقتراحات والشكاوى
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                     </ul>
                     <form class="form-lg-inline">
                         <div class="d-flex flex-column flex-lg-row ">
-                            <i class="fa fa-search fa-lg my-3 my-lg-auto" aria-hidden="true"></i>
+                            <i class="my-3 text-white fa fa-search fa-lg my-lg-auto" aria-hidden="true"></i>
                             <input class="form-control d-none mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <a class="btn mx-3 " href="#" role="button">سجل الآن</a>
+                            <a class="mx-3 btn " href="#" role="button">سجل الآن</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </nav>
+    <!-- end of main navbar -->
     <!-- intro img -->
     <div class="intro-wrapper">
         <div class="intro-img">
         </div>
         <!-- intro section -->
-        <div class="intro-text py-5">
+        <div class="py-5 intro-text">
             <div class="row m-0">
-                <div class="col-12 p-0">
-                    <div class="d-flex flex-column align-items-center justify-content-center text-center">
-                        <h1 class="text-center pt-5 mt-5">
+                <div class="p-0 col-12">
+                    <div class="text-center d-flex flex-column align-items-center justify-content-center">
+                        <h1 class="pt-5 mt-5 text-center">
                             أكبر حدث للشركات العائلية
                             <span class="d-block">منتدى المركز الوطني للتأهيل والقيادة</span>
                         </h1>
@@ -146,7 +219,7 @@
                         <div class="play-icon glow-green d-flex align-items-center justify-content-center">
                             <i class="fa fa-play fa-lg" aria-hidden="true"></i>
                         </div>
-                        <button class="btn about-btn my-5">عن المنتدى</button>
+                        <button class="my-5 btn about-btn">عن المنتدى</button>
                         <div class="whatsapp-btn glow-green d-flex align-items-center justify-content-center">
                             <i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>
                         </div>
@@ -158,13 +231,13 @@
     </div>
     <!-- end of intro img -->
     <!-- about section -->
-    <div class="about-section text-center py-5">
+    <div class="about-section py-5 text-center">
         <div class="row m-0">
             <div class="col-12">
                 <h1 class="my-3">عن المنتدى</h1>
                 <p class="py-1">نبذة عن المنتدى</p>
                 <hr>
-                <p class="py-3 px-5">عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن
+                <p class="px-5 py-3">عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن
                     المنتدى عن
                     المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى عن المنتدى
                     عن المنتدى عن المنتدى عن المنتدى
@@ -175,7 +248,7 @@
     </div>
     <!-- end of about section -->
     <!-- speakers section -->
-    <div class="speakers text-center py-5">
+    <div class="speakers py-5 text-center">
         <div class="container-fluid">
             <div class="col-12">
                 <h1>المتحدثين والخطباء</h1>
@@ -531,14 +604,14 @@
     <!-- end of speakers section -->
     <!-- agenda section -->
     <div class="agenda">
-        <div class="row m-0 text-center py-5">
+        <div class="row py-5 m-0 text-center">
             <div class="col-12">
                 <h1>اجندة المحتوى</h1>
                 <p>جدول مواعيد المحاضرات</p>
                 <hr>
-                <div class="d-flex justify-content-center mx-auto">
+                <div class="mx-auto d-flex justify-content-center">
                 </div>
-                <ul class="nav nav-pills d-flex justify-content-center mb-3" id="pills-tab" role="tablist">
+                <ul class="mb-3 nav nav-pills d-flex justify-content-center" id="pills-tab" role="tablist">
                     <li class="nav-item">
                         <a class="btn btn-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
                             aria-controls="pills-home" aria-selected="true">اليوم الاول</a>
@@ -557,29 +630,29 @@
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                         <div class="row m-0 text-center">
                             <div class="offset-lg-2 col-lg-3">
-                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                <div class="flex-row p-4 text-left card d-flex align-items-center">
                                     <img src="images/3.png" alt="">
                                     <div class="px-3">
                                         <p>التسجيل</p>
                                         <p>نبذة عن المحاضرة</p>
                                     </div>
                                 </div>
-                                <div class="time py-5 text-right">
+                                <div class="py-5 text-right time">
                                     09:00 AM الى 09:00 AM
                                 </div>
-                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                <div class="flex-row p-4 text-left card d-flex align-items-center">
                                     <img src="images/3.png" alt="">
                                     <div class="px-3">
                                         <p>التسجيل</p>
                                         <p>نبذة عن المحاضرة</p>
                                     </div>
                                 </div>
-                                <div class="time py-5 text-right">
+                                <div class="py-5 text-right time">
                                     09:00 AM الى 09:00 AM
                                 </div>
                             </div>
                             <div class="d-none d-lg-block col-lg-1">
-                                <div class="separator mx-auto d-flex justify-content-center">
+                                <div class="mx-auto separator d-flex justify-content-center">
                                     <div>
                                         <i class="fa fa-check" aria-hidden="true"></i>
                                         <i class="fa fa-check" aria-hidden="true"></i>
@@ -589,20 +662,20 @@
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="time py-5 text-left">
+                                <div class="py-5 text-left time">
                                     09:00 AM الى 09:00 AM
                                 </div>
-                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                <div class="flex-row p-4 text-left card d-flex align-items-center">
                                     <img src="images/3.png" alt="">
                                     <div class="px-3">
                                         <p>التسجيل</p>
                                         <p>نبذة عن المحاضرة</p>
                                     </div>
                                 </div>
-                                <div class="time py-5 text-left">
+                                <div class="py-5 text-left time">
                                     09:00 AM الى 09:00 AM
                                 </div>
-                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                <div class="flex-row p-4 text-left card d-flex align-items-center">
                                     <img src="images/3.png" alt="">
                                     <div class="px-3">
                                         <p>التسجيل</p>
@@ -615,29 +688,29 @@
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                         <div class="row m-0 text-center">
                             <div class="offset-lg-2 col-lg-3">
-                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                <div class="flex-row p-4 text-left card d-flex align-items-center">
                                     <img src="images/3.png" alt="">
                                     <div class="px-3">
                                         <p>التسجيل</p>
                                         <p>نبذة عن المحاضرة</p>
                                     </div>
                                 </div>
-                                <div class="time py-5 text-right">
+                                <div class="py-5 text-right time">
                                     10:00 AM الى 10:00 AM
                                 </div>
-                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                <div class="flex-row p-4 text-left card d-flex align-items-center">
                                     <img src="images/3.png" alt="">
                                     <div class="px-3">
                                         <p>التسجيل</p>
                                         <p>نبذة عن المحاضرة</p>
                                     </div>
                                 </div>
-                                <div class="time py-5 text-right">
+                                <div class="py-5 text-right time">
                                     10:00 AM الى 10:00 AM
                                 </div>
                             </div>
                             <div class="d-none d-lg-block col-lg-1">
-                                <div class="separator mx-auto d-flex justify-content-center">
+                                <div class="mx-auto separator d-flex justify-content-center">
                                     <div>
                                         <i class="fa fa-check" aria-hidden="true"></i>
                                         <i class="fa fa-check" aria-hidden="true"></i>
@@ -647,20 +720,20 @@
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="time py-5 text-left">
+                                <div class="py-5 text-left time">
                                     09:00 AM الى 09:00 AM
                                 </div>
-                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                <div class="flex-row p-4 text-left card d-flex align-items-center">
                                     <img src="images/4.png" alt="">
                                     <div class="px-3">
                                         <p>التسجيل</p>
                                         <p>نبذة عن المحاضرة</p>
                                     </div>
                                 </div>
-                                <div class="time py-5 text-left">
+                                <div class="py-5 text-left time">
                                     09:00 AM الى 09:00 AM
                                 </div>
-                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                <div class="flex-row p-4 text-left card d-flex align-items-center">
                                     <img src="images/4.png" alt="">
                                     <div class="px-3">
                                         <p>التسجيل</p>
@@ -673,29 +746,29 @@
                     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                         <div class="row m-0 text-center">
                             <div class="offset-lg-2 col-lg-3">
-                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                <div class="flex-row p-4 text-left card d-flex align-items-center">
                                     <img src="images/1.png" alt="">
                                     <div class="px-3">
                                         <p>التسجيل</p>
                                         <p>نبذة عن المحاضرة</p>
                                     </div>
                                 </div>
-                                <div class="time py-5 text-right">
+                                <div class="py-5 text-right time">
                                     09:00 AM الى 09:00 AM
                                 </div>
-                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                <div class="flex-row p-4 text-left card d-flex align-items-center">
                                     <img src="images/1.png" alt="">
                                     <div class="px-3">
                                         <p>التسجيل</p>
                                         <p>نبذة عن المحاضرة</p>
                                     </div>
                                 </div>
-                                <div class="time py-5 text-right">
+                                <div class="py-5 text-right time">
                                     09:00 AM الى 09:00 AM
                                 </div>
                             </div>
                             <div class="d-none d-lg-block col-lg-1">
-                                <div class="separator mx-auto d-flex justify-content-center">
+                                <div class="mx-auto separator d-flex justify-content-center">
                                     <div>
                                         <i class="fa fa-check" aria-hidden="true"></i>
                                         <i class="fa fa-check" aria-hidden="true"></i>
@@ -705,20 +778,20 @@
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="time py-5 text-left">
+                                <div class="py-5 text-left time">
                                     09:00 AM الى 09:00 AM
                                 </div>
-                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                <div class="flex-row p-4 text-left card d-flex align-items-center">
                                     <img src="images/3.png" alt="">
                                     <div class="px-3">
                                         <p>التسجيل</p>
                                         <p>نبذة عن المحاضرة</p>
                                     </div>
                                 </div>
-                                <div class="time py-5 text-left">
+                                <div class="py-5 text-left time">
                                     09:00 AM الى 09:00 AM
                                 </div>
-                                <div class="card d-flex flex-row align-items-center text-left p-4">
+                                <div class="flex-row p-4 text-left card d-flex align-items-center">
                                     <img src="images/3.png" alt="">
                                     <div class="px-3">
                                         <p>التسجيل</p>
@@ -736,8 +809,8 @@
     <!-- news -->
     <div class="news text-center">
         <div class="row m-0">
-            <div class="col-12 offset-lg-2 col-lg-8 offset-lg-2">
-                <div class="mx-auto py-4">
+            <div class="col-12 offset-lg-2 col-lg-8">
+                <div class="py-4 mx-auto">
                     <h1>لمعرفة آخر الاخبار</h1>
                     <p class="text-center">اشترك الآن</p>
                     <hr>
@@ -753,14 +826,14 @@
     </div>
     <!-- end of news -->
     <!-- live -->
-    <div class="live text-center py-5">
+    <div class="live py-5 text-center">
         <div class="container">
             <div class="col-12">
                 <h1>البث المباشر</h1>
                 <p>شاهد البث المباشر للمؤتمر الان</p>
                 <hr>
-                <div class="video-wrapper d-flex align-items-center justify-content-center">
-                    <div class="play-icon d-flex align-items-center justify-content-center py-3">
+                <div class="video-wrapper slide-out d-flex align-items-center justify-content-center">
+                    <div class="py-3 play-icon d-flex align-items-center justify-content-center">
                         <div class="d-flex align-items-center justify-content-center">
                             <span>
                                 <i class="fa fa-play fa-lg" aria-hidden="true"></i>
@@ -768,20 +841,38 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn my-5 px-3">شاهد التسجيلات السابقة</button>
+                <div class="count-down d-flex flex-column flex-lg-row py-3" dir="ltr">
+                    <div class="count-box">
+                        <p class="days">00</p>
+                        <p>ايام</p>
+                    </div>
+                    <div class="count-box" id="clock">
+                        <p class="hours">00</p>
+                        <p>ساعات</p>
+                    </div>
+                    <div class="count-box">
+                        <p class="minutes">00</p>
+                        <p>دقائق</p>
+                    </div>
+                    <div class="count-box">
+                        <p class="seconds">00</p>
+                        <p>ثواني</p>
+                    </div>
+                </div>
+                <button class="px-3 my-5 btn">شاهد التسجيلات السابقة</button>
             </div>
         </div>
     </div>
     <!-- end of live -->
     <!-- footer -->
-    <footer>
+    <footer class="d-flex align-items-center">
         <div class="container">
             <div class="row m-0">
                 <div class="col-lg-4">
                     <ul>
                         <li class="border-0">
                             <a class="navbar-brand d-flex align-items-center" href="#">
-                                <span class="d-block my-auto mx-lg-2">
+                                <span class="my-auto d-block mx-lg-2">
                                     <b>الملتقى الوطني لاتسدامة<br> المنشئـــــــات العائليــــــــة</b>
                                     <br>
                                     National Conference for Family <br>
@@ -801,7 +892,7 @@
                 <div class="col-lg-2">
                     <ul>
                         <li>
-                            روابط هامة
+                            <b>روابط هامة</b>
                         </li>
                         <li>
                             <a href="">
@@ -827,7 +918,9 @@
                 </div>
                 <div class="col-6 col-lg-2">
                     <ul>
-                        <li>الرئيسية</li>
+                        <li>
+                            <b>الرئيسية</b>
+                        </li>
                         <li>
                             <a href="">
                                 <i class="fa fa-chevron-left" aria-hidden="true"></i>
@@ -852,60 +945,64 @@
                 </div>
                 <div class="col-6 col-lg-4">
                     <ul class="row px-3">
-                        <li class="col-12">بيانات الاتصال</li>
-                        <li class="col-4 p-0 m-0">
-                            <p class="d-flex align-items-center"><i class="fa fa-map-marker mx-2" aria-hidden="true"></i>
+                        <li class="col-12">
+                            <b>بيانات الاتصال</b>
+                        </li>
+                        <li class="p-0 m-0 col-4">
+                            <p class="d-flex align-items-center"><i class="mx-2 fa fa-map-marker" aria-hidden="true"></i>
                                 العنوان
                             </p>
                         </li>
-                        <li class="col-8 p-0 m-0">
+                        <li class="p-0 m-0 col-8">
                             <p>طريق صلاح الدين الأيوبي، الضباط، الرياض 12623، السعودية</p>
                         </li>
-                        <li class="col-4 p-0 m-0">
-                            <p class="d-flex align-items-center"><i class="fa fa-phone mx-2" aria-hidden="true"></i>
+                        <li class="p-0 m-0 col-4">
+                            <p class="d-flex align-items-center"><i class="mx-2 fa fa-phone" aria-hidden="true"></i>
                                 الرقم الموحد
                             </p>
                         </li>
-                        <li class="col-8 p-0 m-0">
+                        <li class="p-0 m-0 col-8">
                             <p>920033515</p>
                         </li>
-                        <li class="col-4 p-0 m-0">
-                            <p class="d-flex align-items-center"><i class="fa fa-print mx-2" aria-hidden="true"></i>
+                        <li class="p-0 m-0 col-4">
+                            <p class="d-flex align-items-center"><i class="mx-2 fa fa-print" aria-hidden="true"></i>
                                 فاكس
                             </p>
                         </li>
-                        <li class="col-8 p-0 m-0">
+                        <li class="p-0 m-0 col-8">
                             <p>0114975665</p>
                         </li>
-                        <li class="col-4 p-0 m-0">
-                            <p class="d-flex align-items-center"><i class="fa fa-print mx-2" aria-hidden="true"></i>
+                        <li class="p-0 m-0 col-4">
+                            <p class="d-flex align-items-center"><i class="mx-2 fa fa-print" aria-hidden="true"></i>
                                 الرمز البريدي
 
                             </p>
                         </li>
-                        <li class="col-8 p-0 m-0">
+                        <li class="p-0 m-0 col-8">
                             <p>920033515</p>
                         </li>
                     </ul>
                 </div>
                 <div class="overlay"></div>
                 <div class="row m-0">
-                    <div class="copyright d-flex align-items-center justify-content-center">
+                    <div class="row m-0">
+                        <div class="copyright text-center d-flex flex-column flex-lg-row align-items-center justify-content-between py-2">
+                            <div class="col-lg-4">
+                                <span>كل الحقوق محفوظة للمركز الوطني للتاهيل والقيادة 2020</span>
+                            </div>
+                            <div class="col-lg-4">
+                                <span>تم التطوير بواسطة اسجى التقنية 2020</span>
+                            </div>
+                            <div class="col-lg-4">
+                                <span class="social">
+                                    <i class="fa fa-globe fa-2x m-lg-1" aria-hidden="true"></i>
+                                    <b>English</b>
+                                    <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                                    <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+                                </span>
+                            </div>
 
-                        <div class="col-lg-4">
-                            <span>كل الحقوق محفوظة للمركز الوطني للتاهيل والقيادة 2020</span>
-                        </div>
-                        <div class="col-lg-4">
-                            <span>تم التطوير بواسطة اسجى التقنية 2020</span>
-                        </div>
-                        <div class="col-lg-4">
-                            <span class="social">
-                                <i class="fa fa-globe fa-2x m-lg-1" aria-hidden="true"></i>
-                                <b>English</b>
-                                <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                                <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
-                                <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-                            </span>
                         </div>
                     </div>
                 </div>
@@ -925,6 +1022,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/jquery.countdown.min.js "></script>
     <script src="js/scripts.js"></script>
 </body>
 

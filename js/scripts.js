@@ -11,11 +11,24 @@ $(document).ready(function () {
     })
 })
 
+
+/***************** main navbar navlink active on click *****************/
+$(document).ready(function () {
+    $('.main-navbar .nav-item').click(function () {
+        $('.main-navbar').find(".active").removeClass("active");
+        $(this).addClass("active");
+     
+    })
+})
+
 /***************** navbar dropdowns show *****************/
 $(document).ready(function () {
-    $('.main-navbar .dropdown').click(function () {
-        alert('kksk')
-    });
+    $('.main-navbar').on('show.bs.dropdown', function () {
+        $('.main-navbar').addClass('nav-white');
+    })
+    $('.main-navbar').on('hidden.bs.dropdown', function () {
+        $('.main-navbar').removeClass('nav-white');
+    })
 });
 
 
@@ -58,6 +71,20 @@ $(document).ready(function () {
 
     });
 });
+
+/***************** live countdown *****************/
+$(document).ready(function () {
+    $('.count-down').countdown({
+        date: '09/17/2021 12:00:00',
+        offset: +2
+    }, function () {
+        $(this).hide();
+        $('.video-wrapper').toggleClass('slide-in');
+    });
+
+});
+
+
 
 /***************** go top *****************/
 $(document).ready(function () {

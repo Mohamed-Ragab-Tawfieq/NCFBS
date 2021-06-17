@@ -1,8 +1,6 @@
 .glow-green {
-    
     animation: green-glow 0.5s infinite alternate;
 
-    
     @keyframes green-glow {
         from {
             box-shadow: 0 0 10px -10px #34e0aa;

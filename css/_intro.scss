@@ -1,7 +1,7 @@
 // intro img section
 .intro-wrapper {
-    background-image: url("../images/intro-bg.png");
     height: 100%;
+    background-image: url("../images/intro-bg.png");
 }
 // end of intro img section
 
@@ -17,16 +17,16 @@
         }
     }
     .play-icon {
-        background: #34e0aa;
-        width: 50px;
-        height: 50px;
         border-radius: 50%;
+        background: #34e0aa;
+        height: 50px;
+        width: 50px;
     }
     .about-btn {
-        @extend .rounded-btn;
-        background: transparent;
         padding: 0.5rem 3rem;
+        background: transparent;
         border: 2px solid #44baa2;
+        @extend .rounded-btn;
         &:hover {
             background: #44baa2;
             color: #fff;
@@ -37,18 +37,18 @@
         position: absolute;
         right: 1rem;
         bottom: 0;
-        background: #17cb48;
         width: 50px;
         height: 50px;
+        background: #17cb48;
         border-radius: 50%;
         @media (max-width: 575px) {
-            width: 70px;
-            height: 70px;
+            width: 50px;
+            height: 50px;
         }
 
         i {
             @media (max-width: 575px) {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
         }
     }

@@ -68,6 +68,10 @@
             background-color: #fff;
             font-weight: bold;
             box-shadow: 0 3px 6px rgba(15, 27, 77, 0.21);
+            @media (max-width: 575px){
+                margin: .5rem;
+                padding: .5rem 1rem;
+            }
             p {
                 margin: 0;
             }
@@ -75,6 +79,9 @@
             p:first-of-type {
                 color: #44baa2;
                 font-size: 2.5rem;
+                @media (max-width: 575px){
+                    font-size: 1.5rem;
+                }
             }
             p:last-of-type {
                 color {

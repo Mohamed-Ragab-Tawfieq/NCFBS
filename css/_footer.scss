@@ -7,7 +7,7 @@ footer {
     background-size: cover;
     font-size: 0.625rem;
     padding-bottom: 3rem;
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         padding-bottom: 6rem !important;
     }
     a {
@@ -20,25 +20,30 @@ footer {
     ul {
         padding: 3rem 0;
         list-style-type: none;
-        @media (max-width: 767px) {
+        @media (max-width: 991px) {
             padding: 0;
-            li {
-                margin: 0.5rem 0 !important;
-                a {
-                    font-size: 0.6rem !important;
-                }
-            }
         }
-
         li {
             margin: 1.5rem 0;
+            a {
+                font-size: 0.6rem !important;
+            }
+            @media (min-width: 767px) and (max-width: 991px) {
+                padding: 0;
+                li {
+                    margin: 0.5rem 0 !important;
+                    a {
+                        font-size: 0.6rem !important;
+                    }
+                }
+            }
             &:first-of-type {
                 padding: 0.5rem 0;
                 border-bottom: 2px solid #31dda7;
                 font-size: 0.75rem;
             }
             .navbar-brand {
-                font-size: 0.75rem;
+                font-size: 0.75rem !important;
                 @media (max-width: 575px) {
                     img {
                         position: absolute;

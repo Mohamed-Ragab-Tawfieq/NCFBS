@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('.toggler-header button').click(function () {
         $('.main-navbar').toggleClass('slide-in slide-out');
         $('.fa-times').click(function () {
-            $('.main-navbar').addClass('slide-out').removeClass("slide-in");
+            $('.main-navbar').addClass("slide-out").removeClass("slide-in");
         })
     })
 })
@@ -17,19 +17,36 @@ $(document).ready(function () {
     $('.main-navbar .nav-item').click(function () {
         $('.main-navbar').find(".active").removeClass("active");
         $(this).addClass("active");
-     
+
     })
 })
 
 /***************** navbar dropdowns show *****************/
 $(document).ready(function () {
-    $('.main-navbar').on('show.bs.dropdown', function () {
-        $('.main-navbar').addClass('nav-white');
-    })
-    $('.main-navbar').on('hidden.bs.dropdown', function () {
-        $('.main-navbar').removeClass('nav-white');
-    })
+    if ($(window).width() > 991) {
+        $('.main-navbar').on('show.bs.dropdown', function () {
+            $('.main-navbar').addClass('nav-white');
+        })
+        $('.main-navbar').on('hidden.bs.dropdown', function () {
+            $('.main-navbar').removeClass('nav-white');
+        })
+    }
 });
+
+/***************** navbar search *****************/
+$(document).ready(function () {
+    $('.main-navbar .fa-search').click(function () {
+        $('.search-section').toggleClass('slide-in slide-out');
+        $('.top-contact-header').toggleClass("position-fixed w-100");
+    })
+    $('.search-section .close-search').click(function () {
+        $('.search-section').toggleClass('slide-in slide-out');
+        $('.top-contact-header').toggleClass("position-fixed w-100");
+    })
+    $('.search-section .btn').click(function () {
+        $('.search-section .results').removeClass('d-none');
+    })
+})
 
 
 /***************** speaker box on hover *****************/

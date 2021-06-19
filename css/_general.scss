@@ -10,7 +10,14 @@ a {
 }
 .rounded-btn {
     background: linear-gradient(#2fd3b5, #29bcd6);
-    padding: 0.4rem 4rem;
+    padding: 0.4rem 2rem;
     border-radius: 2rem;
     color: #fff;
+}
+.hr-custom{
+    border: none;
+    width: 65px;
+    height: 5px;
+    background: linear-gradient(#31dda7, #29bcd6);
+    box-shadow: 0 3px 6px #5abacd;
 }

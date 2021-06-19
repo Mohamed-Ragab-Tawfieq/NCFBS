@@ -7,7 +7,7 @@
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        @media (max-width: 575px) {
+        @media (max-width: 991px) {
             content: "";
         }
     }
@@ -41,13 +41,6 @@
             }
         }
     }
-    hr {
-        border: none;
-        width: 65px;
-        height: 5px;
-        background: linear-gradient(#31dda7, #29bcd6);
-        box-shadow: 0 3px 6px #5abacd;
-    }
     button {
         @extend .rounded-btn;
         background: #111256;
@@ -61,6 +54,7 @@
         border-radius: 0.75rem;
         color: #111256;
         box-shadow: 0 3px 7px rgba(143, 137, 137, 0.16);
+        font-size: .75rem;
         p:first-of-type {
             font-weight: bold;
         }
